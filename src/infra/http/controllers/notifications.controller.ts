@@ -21,8 +21,6 @@ export class NotificationsController {
 
   @Patch(':id/cancel')
   async cancel(@Param('id') id: string) {
-    console.log(id);
-
     await this.cancelNotification.execute({
       notificationId: id,
     });
