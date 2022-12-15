@@ -2,72 +2,133 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 align="center">
+   <a href="#"> Notification Service </a>
+</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<h3 align="center">
+Notification Micro Service
+</h3>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/arubesu/notification-service">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/arubesu/notification-service">
+
+  <a href="https://github.com/arubesu/notification-service/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/arubesu/notification-service">
+  </a>
+    <img alt="Status" src="https://img.shields.io/badge/Status-Finished-green">
+    
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<p align="center">
+ <a href="#about">About</a> •
+ <a href="#features">Features</a> •
+ <a href="#pre-requisites">Pre-requisites</a> • 
+ <a href="#tech-stack">Tech Stack</a> • 
+ <a href="#contributors">Contributors</a> • 
+ <a href="#author">Author</a> • 
+ <a href="#user-content-license">License</a>
 
-## Installation
+</p>
+
+
+## About
+
+Project developed during  ignite lab  offered by [Rocketseat](https://blog.rocketseat.com.br/). 
+
+---
+
+## Features
+
+- [x] Send Notification
+- [x] Cancel Notification
+- [x] Read Notification
+- [x] Unread Notification
+- [x] Unread Notification
+- [x] Count Notifications by recipient
+- [x] List Notifications by recipient
+
+---
+### Pre-requisites
+
+Before you begin, you will need to have the following tools installed on your machine:
+[Git] (https://git-scm.com), [Node.js] (https://nodejs.org/en/).
+In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/)
+
+#### Running Backend (server)
 
 ```bash
-$ npm install
-```
 
-## Running the app
+# Clone this repository
+$ git clone git@github.com:arubesu/notification-service.git
 
-```bash
-# development
-$ npm run start
+# Access the project folder cmd/terminal
+$ cd notification-service
 
-# watch mode
-$ npm run start:dev
+# install the dependencies
+$ yarn install
 
-# production mode
-$ npm run start:prod
+#run migrations 
+yarn prisma migrate dev     
+
+# Run the application in development mode
+$ yarn start:dev
+
+# The server will start at port: 3000 - go to http://localhost:3000
+
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ yarn test
 ```
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Notifications%20Service&uri=https%3A%2F%2Fraw.githubusercontent.com%2Farubesu%2Fnotification-service%2Fmaster%2Finsomnia%2Fnotifications-service.json)
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+---
 
-## Stay in touch
+## Tech Stack
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+The following tools were used in the construction of the project:
+
+#### **Server**  ([NodeJS](https://nodejs.org/en/)  )
+
+-   **[Nestjs](https://nestjs.com)**
+-   **[Prisma](https://www.prisma.io)**
+-   **[Jest](https://jestjs.io/)**
+
+> See the file  [package.json](https://github.com/arubesu/notification-service/blob/master/package.json)
+
+#### **Tools**
+
+-   Rest Client:  **[Insomnia](https://insomnia.rest/)**
+---
+## How to contribute
+
+1. Fork the project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
+4. Submit your changes: `git push origin my-feature`
+> If you have any questions check this [guide on how to contribute](https://github.com/firstcontributions/first-contributions)
+
+---
+
+## Author
+
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29710382?v=4" width="100px;" alt="Bruno Souza"/>
+ <br />
+
+ [![Linkedin Badge](https://img.shields.io/badge/-Bruno_Souza-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/bruno-a-souza/)](https://www.linkedin.com/in/bruno-a-souza/) 
+---
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is under the license [MIT](./LICENSE).
+
+Made with ❤️  by Bruno Souza 👋🏽 [Get in Touch!](https://www.linkedin.com/in/bruno-a-souza/)
