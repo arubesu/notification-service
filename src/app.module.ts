@@ -1,8 +1,17 @@
+import { MessagingModule } from '@infra/messaging/messaging.module';
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from './infra/database/database.module';
 import { HttpModule } from './infra/http/http.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [HttpModule, DatabaseModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    HttpModule,
+    DatabaseModule,
+    MessagingModule,
+  ],
 })
 export class AppModule {}
